@@ -1,0 +1,403 @@
+/* BEGIN GLOBAL CSS */
+
+header,
+nav,
+section,
+article,
+footer {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+.wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+.section-padding {
+    width: 90%;
+    margin: auto;
+}
+
+
+/* END GLOBAL CSS */
+
+
+/* begin header */
+
+.header {
+    position: relative;
+}
+
+.header-left {
+    width: 40%;
+    float: left;
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 65px;
+}
+
+.header-left h1 a {
+    text-decoration: none;
+    color: #dc4310;
+}
+
+.header-left p {
+    margin: 0;
+    font-size: 16px;
+    padding-left: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.header-right {
+    width: 60%;
+    float: right;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+.header-right a {
+    color: #3cbfff;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 70px;
+    padding-left: 20px;
+}
+
+.header-right a:hover {
+    color: #E0401D;
+}
+
+.header-right .active {
+    color: #e16444;
+}
+
+
+/* end header */
+
+
+/* carousel  */
+
+.carousel-top {
+    background-image: url(../images/banner.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.carousel-top-text {
+    position: absolute;
+    right: 8%;
+    top: 27%;
+    text-align: right;
+}
+
+.carousel-top-text h2,
+.carousel-top-text p {
+    background-color: rgb(119, 128, 133, 0.7);
+    color: #373737;
+    display: inline;
+    padding-right: 15px;
+    word-spacing: 2px;
+}
+
+.carousel-top-text>h2 {
+    font-size: 55px;
+    letter-spacing: 3px;
+    font-weight: 400;
+    line-height: 150px;
+}
+
+.carousel-top-text>p {
+    font-size: 17px;
+    letter-spacing: 7px;
+    line-height: 40px;
+    /* margin: 0 10px 20px 0; */
+}
+
+.carousel-bottom {
+    background-color: #3cbfff;
+    padding: 15px 80px 25px;
+}
+
+.carousel-bottom h3 {
+    margin: 0;
+    background-color: #71aec8;
+    display: inline;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.carousel-bottom p {
+    text-align: justify;
+    color: #d2d5e2;
+    font-size: 18px;
+}
+
+
+/* carousel  */
+
+
+/* begin intro */
+
+.intro-text {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.intro-text h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #a0a2ad;
+}
+
+.intro-list-item {
+    width: 50%;
+    float: left;
+}
+
+.intro-list-item img {
+    width: 100%;
+    display: block;
+}
+
+.intro-list-item i {
+    color: #3cbfff;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0 10px 0 5px;
+    margin-top: 23px;
+    float: left;
+}
+
+.intro-list-item h3 {
+    font-size: 30px;
+    color: #ec5c25;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.intro-list-item p {
+    margin: 0;
+    padding-left: 40px;
+    color: #b5baba;
+    font-size: 18px;
+}
+
+
+/* end intro */
+
+
+/* begin performance */
+
+.performance {
+    padding-top: 30px;
+}
+
+.performance h3 {
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.performance-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.performance-list-item img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* end performance */
+
+
+/* begin success */
+
+.success {
+    padding: 50px 0 80px 0;
+}
+
+.success h3 {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.success-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.success-service h5,
+.success-do h5 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.success-service ul,
+.success-do ul {
+    margin: 0;
+    padding: 0;
+}
+
+.success-service ul li,
+.success-do ul li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.success-service ul li a,
+.success-do ul li a {
+    color: #999ca0;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.success-do i {
+    color: #3cbfff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.success-content-right {
+    background-image: url(../images/index-sevices.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-left: 10%;
+}
+
+.success-content-right ol {
+    position: absolute;
+    top: 5%;
+    left: 6%;
+    list-style: none;
+    counter-reset: item;
+    margin: 0;
+}
+
+.success-content-right ol li {
+    color: #2e94d9;
+    margin: 35px 0;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.success-content-right ol li:before {
+    content: counter(item);
+    counter-increment: item;
+    font-weight: bold;
+}
+
+.success-content-right ol li span {
+    color: #ffffff;
+    font-weight: normal;
+    text-transform: capitalize;
+    padding-left: 30px;
+    font-size: 25px;
+}
+
+
+/* end success */
+
+
+/* begin footer */
+
+.footer {
+    background-color: #242424;
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+}
+
+.footer-content h5 {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 60px 0 20px 0;
+}
+
+.footer-content p,
+.footer-content a {
+    color: #677777;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.footer-content .navigation a {
+    text-decoration: none;
+    display: block;
+    margin: 15px 0;
+}
+
+.footer-content .contact .email-contact {
+    font-size: 15px;
+    padding: 5px;
+    color: #979fb0;
+}
+
+.footer-content .contact .btn-submit {
+    background-color: #eb5324;
+    color: white;
+    font-size: 15px;
+    padding: 7px 10px;
+    margin-left: -5px;
+    border: none;
+}
+
+.footer-content .copy-right {
+    margin-left: 60px;
+}
+
+.footer-content .copy-right>h5>a {
+    font-size: 70px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-content .copy-right span {
+    color: #b73123;
+}
+
+
+/* end footer */
