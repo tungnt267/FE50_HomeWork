@@ -115,9 +115,8 @@ html {
 
 .carousel {
     height: 500px;
-    background-image: url(../images-layout1/banner.jpg);
+    background: url(../images-layout1/banner.jpg) no-repeat;
     background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -125,28 +124,28 @@ html {
 
 .carousel-content {
     text-align: right;
-    padding-right: 8%;
+    padding-right: 9%;
+    line-height: 34px;
 }
 
 .carousel-content h2,
 .carousel-content p {
     background-color: rgba(115, 125, 131, 0.8);
-    display: inline-block;
+    display: inline;
     word-spacing: 4px;
     letter-spacing: 10px;
     color: #323232;
+    padding: 0;
 }
 
 .carousel-content h2 {
-    margin-top: 0;
     font-size: 50px;
     font-weight: 500;
-    margin-bottom: 20px;
+    line-height: 140px;
 }
 
 .carousel-content p {
     font-size: 14px;
-    margin-bottom: 0px;
 }
 
 
@@ -289,10 +288,10 @@ html {
 }
 
 .service-text h3 {
+    margin: 0;
     font-size: 30px;
     font-weight: 500;
     padding: 14px 0;
-    margin: 0;
 }
 
 .service-text span {
@@ -301,6 +300,7 @@ html {
     font-weight: 500;
 }
 
+margin-left: 0;
 .service-text-bot i {
     color: #31c0ff;
     font-size: 24px;
