@@ -1,0 +1,504 @@
+/* GLOBAL CSS */
+
+header,
+section,
+nav,
+footer,
+aside,
+main,
+article,
+figure {
+    display: block;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.section-padding {
+    width: 90%;
+    margin: auto;
+}
+
+
+/* END GLOBAL CSS */
+
+
+/* HEADER CSS */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo a {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.header-logo a span {
+    color: #82b62e;
+    font-size: 28px;
+    padding-right: 12px;
+    font-weight: 600;
+}
+
+.header-logo a h1 {
+    font-size: 50px;
+    color: #000000;
+}
+
+.header-right {
+    padding-top: 40px;
+}
+
+.header-contact {
+    color: #999999;
+    font-size: 16px;
+    text-align: right;
+}
+
+.header-contact i {
+    padding-left: 20px;
+}
+
+.header-contact a {
+    color: #999999;
+    text-decoration: none;
+}
+
+.header-contact a:hover {
+    color: #de4c1d;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-right: 60px;
+}
+
+.header-nav ul li {
+    margin-right: 20px;
+}
+
+.header-nav ul li a {
+    color: #2f2f2f;
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header-nav ul li a:hover {
+    color: #de4c1d;
+}
+
+.header-nav ul li.active a {
+    color: #de4c1d;
+}
+
+.header-social a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #2f2f2f;
+    padding-right: 16px;
+}
+
+.header-social a:hover {
+    color: #de4c1d;
+}
+
+
+/* END HEADER CSS */
+
+
+/* CAROUSEL CSS */
+
+.carousel {
+    background: url(../IMAGES/1.jpg) no-repeat center center;
+    height: 950px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-content {
+    color: #ffffff;
+    text-align: center;
+}
+
+.carousel-content h2 {
+    margin: 20px 0;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.carousel-content p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.carousel-content p:first-child {
+    letter-spacing: 10px;
+    font-weight: bold;
+    padding-top: 80px;
+}
+
+.carousel-content p:nth-child(3) {
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.btn-more {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #82b62e;
+    border: none;
+    padding: 10px 20px;
+}
+
+.btn-more:hover {
+    background-color: #3b5f02;
+}
+
+.carousel-btn {
+    margin-top: 120px;
+}
+
+.carousel-btn input {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: none;
+}
+
+.carousel-btn input:first-child {
+    background-color: #82b62e;
+}
+
+.carousel a img {
+    position: absolute;
+    right: 1%;
+    bottom: -1%;
+    width: 50px;
+}
+
+
+/* END CAROUSEL CSS */
+
+
+/* ABOUT CSS */
+
+.about {
+    position: relative;
+}
+
+.about a img {
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    width: 50px;
+}
+
+.about h2 {
+    text-align: center;
+    color: #424242;
+    font-size: 50px;
+}
+
+.about-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-item p {
+    color: #a599a5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.about-item img {
+    display: block;
+}
+
+.about-text-1 {
+    padding-right: 30px;
+}
+
+.about-text-2 {
+    padding-left: 30px;
+}
+
+
+/* END ABOUT CSS */
+
+
+/* SERVICE CSS */
+
+.service {
+    background-color: #f0f5f8;
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.service h2 {
+    font-size: 50px;
+    letter-spacing: 10px;
+    padding-top: 80px;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.service-item i {
+    color: #82b62e;
+    font-size: 40px;
+    padding: 16px;
+    background-color: #ffffff;
+}
+
+.service h2,
+.service-item h3 {
+    color: #424242;
+}
+
+.service-item p {
+    color: #b8c0d0;
+}
+
+.service a img {
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    width: 50px;
+}
+
+
+/* END SERVICE CSS */
+
+
+/* NEWS CSS */
+
+.news {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.news-content {
+    display: flex;
+}
+
+.news h2 {
+    text-align: center;
+    color: #424242;
+    font-size: 50px;
+}
+
+.news-item-right {
+    padding-left: 40px;
+}
+
+.news-item-top {
+    display: flex;
+}
+
+.news-item-top a {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+.news-item-top a:hover {
+    color: #de4c1d;
+}
+
+.calendar {
+    padding-left: 80px;
+}
+
+.news-item-right p {
+    padding: 20px 40px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.news a img {
+    position: absolute;
+    right: 1%;
+    bottom: 30%;
+    width: 50px;
+}
+
+
+/* END NEWS CSS */
+
+
+/* CLUB CSS */
+
+.club {
+    background: url(../IMAGES/5.jpg) no-repeat center center;
+    background-size: cover;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.club-content {
+    text-align: center;
+}
+
+.club-content h2 {
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 5px;
+    padding-bottom: 40px;
+}
+
+.club-content input {
+    width: 500px;
+    font-size: 16px;
+    padding: 16px 10px;
+    border: none;
+    margin-bottom: 66px;
+}
+
+.club-content button {
+    background-color: #82b62e;
+    border: none;
+    font-size: 16px;
+    padding: 16px 20px;
+}
+
+.club-content button i {
+    color: #ffffff;
+}
+
+.club a img {
+    position: absolute;
+    right: 1%;
+    bottom: 12%;
+    width: 50px;
+}
+
+.club-bot {
+    background-color: rgba(30, 46, 71, 0.8);
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* END CLUB CSS */
+
+
+/* HISTORY CSS */
+
+.history-content {
+    display: grid;
+    grid-template-columns: 35% 35% 15% 15%;
+    padding: 50px 0 30px 0;
+    text-align: justify;
+}
+
+.history-content p,
+.history-content span,
+.history-content i {
+    color: #474849;
+    font-size: 16px;
+}
+
+.history-content p {
+    padding-right: 40px;
+}
+
+.history-content i {
+    padding-right: 20px;
+}
+
+.history-content a {
+    text-decoration: none;
+    color: #82b62e;
+}
+
+.history-item-3 span {
+    font-weight: bold;
+}
+
+.history-item-4 ul {
+    padding-left: 20px;
+}
+
+.history-item-4 ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.history-item-4 ul li a {
+    color: #474849;
+}
+
+.history-item-4 ul li a:hover {
+    color: #de4c1d;
+}
+
+
+/* END HISTORY CSS */
+
+
+/* FOOTER CSS */
+
+.footer {
+    background-color: #0f1215;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.footer-content p {
+    margin: 0;
+    padding: 30px 0;
+}
+
+.footer-content a {
+    color: #82b62e;
+    text-decoration: none;
+}
+
+.footer a img {
+    position: absolute;
+    right: 0.5%;
+    bottom: 20%;
+    width: 50px;
+}
+
+
+/* END FOOTER CSS */
