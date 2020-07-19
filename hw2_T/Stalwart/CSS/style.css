@@ -48,13 +48,14 @@ figure {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 .header__navbar {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 20px 0;
 }
 
 .header__navbar a {
@@ -63,7 +64,6 @@ figure {
   font-size: 18px;
   font-weight: 400;
   margin-right: 20px;
-  padding: 20px 0;
 }
 
 .header__navbar a:hover {
@@ -113,40 +113,46 @@ figure {
   background-color: #31c0ff;
 }
 
-.intro-content h2 {
+.intro__content {
+  padding: 50px 0;
+}
+
+.intro__content h2 {
   background-color: #72afc8;
   display: inline-block;
   font-weight: 500;
-  margin: 25px 0;
+  margin-bottom: 25px;
 }
 
-.intro-content p {
+.intro__content p {
   font-size: 16px;
   color: #b8d8d8;
-  padding-bottom: 50px;
 }
 /* END INTRO CSS */
 
 /* TEAM CSS*/
+.team {
+  padding: 20px 0;
+}
+
 .team > h2,
 .team > p {
-  padding: 10px 0;
   text-align: center;
 }
 
 .team > h2 {
-  margin-top: 15px;
   font-size: 60px;
   font-weight: 500;
+  line-height: 100px;
 }
 
 .team > p {
   color: #909090;
   font-size: 16px;
-  padding-bottom: 20px;
 }
 
 .team__item {
+  padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -172,52 +178,52 @@ figure {
   font-size: 40px;
   font-weight: 500;
   display: inline;
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 .team__text p {
   margin-bottom: 0;
   color: #909090;
-  padding: 20px 0 20px 42px;
+  margin: 20px 0 20px 42px;
 }
 /* END TEAM CSS*/
 
 /* GALLERY CSS*/
 .gallery {
-  margin-bottom: 100px;
+  padding: 50px 0;
 }
-
 .gallery__content h2 {
   font-weight: 600;
   text-align: center;
   font-size: 50px;
-  padding: 20px 0;
 }
 
 .gallery__grid {
+  padding-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
 }
 
 .gallery__grid img {
   width: 100%;
-  padding: 5px;
 }
 /* END GALLERY CSS*/
 
 /* SERVICE CSS */
 .service {
-  margin-bottom: 80px;
+  padding: 80px 0;
 }
 
 .service__content h2 {
   text-align: center;
   font-size: 50px;
   font-weight: 600;
-  padding-bottom: 20px;
 }
 
 .service__list {
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
 }
@@ -225,11 +231,7 @@ figure {
 .service__text h3 {
   font-size: 28px;
   font-weight: 500;
-  padding: 40px 0 14px 0;
-}
-
-.service__text h3:first-child {
-  padding-top: 0px;
+  margin: 40px 0 14px 0;
 }
 
 .service__text span {
@@ -241,7 +243,7 @@ figure {
 .service__text i {
   color: #31c0ff;
   font-size: 24px;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 
 .service__img {
@@ -257,14 +259,13 @@ figure {
 }
 
 .service__img ol {
-  margin-left: 0;
   list-style: none;
   counter-reset: item;
 }
 
 .service__img ol li {
   font-size: 25px;
-  padding: 20px 0;
+  margin: 20px 0;
 }
 
 .service__img ol li:before {
@@ -275,7 +276,7 @@ figure {
 
 .service__img ol li span {
   color: #ffffff;
-  padding-left: 34px;
+  margin-left: 34px;
   font-size: 20px;
 }
 /* END SERVICE CSS */
@@ -294,17 +295,15 @@ figure {
 .footer__content h3,
 .footer__content h2 {
   color: #ffffff;
-  padding-bottom: 20px;
+  line-height: 60px;
 }
 
 .footer__nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .footer__nav ul li {
-  padding: 10px 0;
+  line-height: 40px;
 }
 
 .footer__nav ul li a,
@@ -319,7 +318,7 @@ p {
 }
 
 .footer__contact p {
-  line-height: 46px;
+  line-height: 40px;
 }
 
 .footer__email input {
