@@ -50,7 +50,7 @@ figure {
 .header__logo a span {
   color: #82b62e;
   font-size: 28px;
-  padding-right: 12px;
+  margin-right: 12px;
   font-weight: 600;
 }
 
@@ -71,7 +71,7 @@ figure {
 }
 
 .header__contact i {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .header__contact a {
@@ -120,7 +120,7 @@ figure {
   text-decoration: none;
   font-size: 18px;
   color: #2f2f2f;
-  padding-right: 16px;
+  margin-right: 16px;
 }
 
 .header__social a:hover {
@@ -156,11 +156,11 @@ figure {
   font-size: 80px;
   font-weight: 900;
   line-height: 80px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .carousel p:nth-child(3) {
-  padding: 30px 0;
+  margin: 30px 0;
 }
 
 .btn-more {
@@ -197,14 +197,14 @@ figure {
 
 /* ABOUT CSS */
 .about {
-  margin-bottom: 80px;
+  padding: 50px 0;
 }
 
 .about h2 {
   text-align: center;
   color: #424242;
   font-size: 50px;
-  padding: 50px 0;
+  margin-bottom: 30px;
 }
 
 .about__list {
@@ -212,12 +212,16 @@ figure {
   justify-content: space-between;
 }
 
+.about__item h3 {
+  font-size: 25px;
+}
+
 .about__item p {
   color: #a599a5;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .about__item img {
@@ -251,8 +255,7 @@ figure {
 }
 
 .service__item {
-  padding: 50px 0;
-  margin-right: 20px;
+  padding: 50px 20px 50px 0;
 }
 
 .service__item i {
@@ -268,7 +271,7 @@ figure {
 }
 
 .service__item h3 {
-  padding: 25px 0;
+  line-height: 70px;
 }
 
 .service-item p {
@@ -278,17 +281,17 @@ figure {
 
 /* NEWS CSS */
 .news {
-  margin: 50px 0;
+  padding: 50px 0;
 }
 
 .news h2 {
   text-align: center;
   color: #424242;
   font-size: 50px;
-  padding: 50px 0;
 }
 
 .news__content {
+  padding: 50px 0;
   display: flex;
 }
 
@@ -310,11 +313,11 @@ figure {
 }
 
 .calendar {
-  padding-left: 80px;
+  margin-left: 80px;
 }
 
 .news__content__right p {
-  padding: 50px 40px;
+  margin: 50px 40px;
   font-size: 40px;
   font-weight: 900;
 }
@@ -337,7 +340,7 @@ figure {
   color: #ffffff;
   font-size: 50px;
   letter-spacing: 5px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .club__form input {
@@ -384,15 +387,15 @@ figure {
 }
 
 .history__item h3 {
-  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 .history__item p {
-  padding: 10px 40px 10px 0;
+  margin: 10px 40px 10px 0;
 }
 
 .history__item i {
-  padding-right: 20px;
+  margin-right: 20px;
 }
 
 .history__item a {
@@ -401,7 +404,7 @@ figure {
 }
 
 .history__item__3 p {
-  padding: 3px 0;
+  line-height: 20px;
 }
 
 .history__item__3 span {
@@ -409,13 +412,13 @@ figure {
 }
 
 .history__item__4 ul {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .history__item__4 ul li {
   text-decoration: none;
   list-style: none;
-  padding: 5px 0;
+  margin-bottom: 5px;
 }
 
 .history__item__4 ul li a {
@@ -436,7 +439,7 @@ figure {
 }
 
 .footer p {
-  padding: 30px 0;
+  line-height: 60px;
 }
 
 .footer span {
