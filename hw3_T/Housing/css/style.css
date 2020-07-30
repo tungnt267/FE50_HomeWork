@@ -1,0 +1,126 @@
+/* GLOBAL CSS */
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+/* END GLOBAL CSS */
+
+/* HEADER  CSS*/
+.header__nav {
+  background-color: #333333;
+}
+.header__nav .navbar-brand h1 span {
+  color: #02cdce;
+  font-size: 2.5rem;
+}
+.header__nav .nav-item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+}
+.header__nav .nav-item:hover::after {
+  background-color: #333333;
+}
+/* END HEADER CSS*/
+
+/* CAROUSEL  */
+.carousel .item-1 {
+  background: url("../img/b1.jpg") no-repeat center center;
+  background-size: cover;
+  height: 850px;
+}
+.carousel .item-2 {
+  background: url("../img/b2.jpg") no-repeat center center;
+  background-size: cover;
+  height: 850px;
+}
+.carousel .item-3 {
+  background: url("../img/b3.jpg") no-repeat center center;
+  background-size: cover;
+  height: 850px;
+}
+.carousel .item-4 {
+  background: url("../img/b4.jpg") no-repeat center center;
+  background-size: cover;
+  height: 850px;
+}
+.carousel .carousel-item__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.carousel .carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/* END CAROUSEL CSS*/
+
+/* ABOUT  CSS*/
+.about__item p,
+.about-us p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+/* END ABOUT CSS*/
+
+/* STATISTIC CSS*/
+.stats {
+  background-color: #02cdce;
+}
+/* END STATISTIC CSS*/
+
+/* BLOG  */
+.blog .card {
+  background-color: #efefef;
+  border: none;
+}
+.blog .card-title {
+  color: #02cdce;
+}
+.blog .btn-more {
+  background-color: #000000;
+  color: #02cdce;
+  border-radius: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+}
+/* END BLOG CSS */
+
+/* GET MORE  */
+/* END GET MORE CSS*/
+
+/* PORTFOLIO  CSS*/
+/* END PORTFOLIO CSS*/
+
+/* SUBSCRIBE  CSS*/
+/* END SUBSCRIBE CSS*/
+
+/* OUR AGENTS  CSS*/
+/* END OUR AGENTS CSS*/
+
+/* MEDIA QUERY */
+/* @media screen and (max-width: 768px) {
+    .header__nav
+} */
+/* END MEDIA QUERY */
