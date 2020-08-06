@@ -1,0 +1,99 @@
+/* GLOBAL CSS */
+* {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+.go-top {
+  position: fixed;
+  bottom: 8%;
+  right: 3%;
+  z-index: 9999;
+}
+/* END GLOBAL CSS */
+
+/* HEADER CSS */
+.header__contact {
+  background-color: #363d41;
+  padding: 10px 0;
+}
+.header__social a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.header__social a i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.header__social .fa-facebook:hover {
+  color: #527dbd;
+}
+.header__social .fa-twitter:hover {
+  color: #1da1f2;
+}
+.header__social .fa-google:hover {
+  color: #dd4b39;
+}
+.header__social .fa-linkedin:hover {
+  color: #0077b5;
+}
+.header__menu {
+  padding: 1em;
+}
+.header__menu .navbar-brand h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #868c94;
+  margin: 0;
+}
+.header__menu .navbar-brand h1 span {
+  color: #7f67f8;
+  font-size: 34px;
+  font-weight: 700;
+}
+.header__menu .nav-link {
+  padding: 0;
+  color: #363d41;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.header__menu .nav-item:hover .nav-link,
+.header__menu .nav-item.active .nav-link {
+  color: #7f67f8;
+}
+/* END HEADER CSS */
+
+/* CAROUSEL CSS */
+/* END CAROUSEL CSS */
+
+/* WHAT YOU GET CSS */
+/* END WHAT YOU GET CSS */
+
+/* BANNER CSS */
+/* END BANNER CSS */
+
+/* STATISTIC CSS */
+/* END STATISTIC CSS */
+
+/* SERVICE CSS */
+/* END SERVICE CSS */
+
+/* CUSTOMER CSS */
+/* END CUSTOMER CSS */
+
+/* FOOTER CSS */
+/* END FOOTER CSS */
+
+/* MEDIA QUERY */
+/* END MEDIA QUERY */

@@ -189,11 +189,13 @@
   color: #ffffff;
 }
 .modal-link button.close {
-  color: #a0260e;
+  opacity: 1;
+  color: #a0260f;
   font-size: 1.5em;
 }
-.modal-link .close i:hover {
+.modal-link .close:hover i {
   color: #055555;
+  opacity: 1;
 }
 .modal-link .modal-body p {
   font-size: 15px;
@@ -286,6 +288,8 @@
 }
 .portfolio__item:hover .portfolio__item__content {
   opacity: 1;
+}
+.modal__config {
 }
 /* END PORTFOLIO CSS*/
 
@@ -567,7 +571,10 @@
     display: none;
   }
   .carousel-section .carousel-indicators {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    bottom: 0.5em;
+    left: 0;
   }
   .title-h3 {
     font-size: 3em;
