@@ -1,0 +1,148 @@
+.service {
+    padding: $spacing * 8 0;
+    text-align: center;
+    background: url(../img/3.jpg) no-repeat 0px 0px;
+    background-size: cover;
+
+    .container {
+        .service__header {
+            margin-bottom: $spacing * 8;
+
+            h3 {
+                margin: 0;
+                @include text($txtWhite, $h2, $fwRegular);
+            }
+
+            p {
+                @include text($txtWhite, $subtitle1, $fwRegular);
+                margin: $spacing * 2 auto;
+                width: 60%;
+                line-height: 1.8em;
+                letter-spacing: 1px;
+            }
+        }
+
+        .service__item {
+            padding: $spacing * 4;
+        }
+
+        .service__item-orange {
+            background-color: $bgOrange;
+            color: $txtWhite;
+
+            i {
+                color: $txtWhite;
+                font-size: $h2;
+            }
+
+            h6 {
+                @include text($txtWhite, $h5, $fwMedium);
+                margin: $spacing * 2.4 0;
+                letter-spacing: 2px;
+            }
+
+            p {
+                margin: 0;
+                letter-spacing: 1px;
+            }
+        }
+
+        .service__item-white {
+            background-color: $bgWhite;
+            color: $txtBlack;
+
+            i {
+                color: $txtOrange;
+                font-size: $h2;
+            }
+
+            h6 {
+                @include text($txtBlack, $h5, $fwMedium);
+                margin: $spacing * 2.4 0;
+                letter-spacing: 2px;
+            }
+
+            p {
+                margin: 0;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    @include respond-to('large') {
+        padding: $spacing * 4.8 0;
+
+        .container {
+            .service__header {
+                margin-bottom: $spacing * 4.8;
+
+                h3 {
+                    @include text($txtWhite, $h3 + 3, $fwRegular);
+                }
+            }
+
+            .service__item {
+                padding: $spacing * 2.4;
+            }
+        }
+    }
+
+    @include respond-to('medium') {
+
+        .container {
+            .service__header {
+                p {
+                    width: 100%;
+                }
+            }
+
+            .service__item-orange {
+
+                h6 {
+                    @include text($txtWhite, $h6, $fwMedium);
+                    letter-spacing: 1px;
+                }
+            }
+
+            .service__item-white {
+                h6 {
+                    @include text($txtBlack, $h6, $fwMedium);
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        padding: $spacing * 4 0;
+
+        .container {
+            width: 90%;
+
+            .service__header {
+                margin-bottom: $spacing * 3.2;
+
+                h3 {
+                    @include text($txtWhite, $subtitle2 * 2 + 1, $fwRegular);
+                }
+
+                p {
+                    @include text($txtWhite, $subtitle2, $fwRegular);
+                }
+            }
+
+            .service__item-orange {
+
+                p {
+                    font-size: $subtitle2;
+                }
+            }
+
+            .service__item-white {
+                p {
+                    font-size: $subtitle2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.banner {
+    background: url(../img/3.jpg) no-repeat;
+    background-size: cover;
+    padding: 6em 0;
+    text-align: center;
+
+    h3 {
+        margin: 0;
+        @include text($txtWhite, $h3, $fwRegular);
+        letter-spacing: $spacing / 2 - 1;
+    }
+
+    @include respond-to('extra-large') {
+        h3 {
+            @include text($txtWhite, $h3 - 6, $fwRegular);
+            letter-spacing: $spacing / 2 - 2;
+        }
+    }
+
+    @include respond-to('large') {
+        h3 {
+            @include text($txtWhite, $h5 + 2, $fwRegular);
+            letter-spacing: $spacing / 5;
+        }
+
+        .btn-contactUs {
+            padding: 0.7em 1.6em;
+            letter-spacing: 2px;
+        }
+    }
+
+    @include respond-to('medium') {
+        h3 {
+            @include text($txtWhite, $h4, $fwRegular);
+            margin-bottom: $spacing * 1.5;
+        }
+    }
+}

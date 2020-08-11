@@ -1,0 +1,64 @@
+.provide {
+    text-align: center;
+    padding: $spacing * 8 0;
+
+    &__header {
+        margin: 0 0 $spacing * 8;
+
+        h3 {
+            @include text($txtBlack, $h2, $fwRegular);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+            margin: 0;
+        }
+
+        p {
+            @include text($txtGrey, $subtitle1, $fwRegular);
+            width: 100%;
+            margin: $spacing * 2 auto;
+            line-height: 1.8em;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__divide {
+        width: 75%;
+        height: 1px;
+        margin: 0 auto 3em;
+    }
+
+    &__item {
+        margin-bottom: $spacing * 2;
+
+        i {
+            font-size: $h3;
+            color: $txtOrange;
+        }
+
+        h4 {
+            margin: $spacing * 2 0;
+            @include text($textBlack2, $h4, $fwMedium);
+        }
+
+        p {
+            @include text($txtGrey, $subtitle1, $fwRegular);
+            margin: 0;
+        }
+    }
+
+    .item-mid {
+        border-left: 1px solid #e8e8e8;
+        border-right: 1px solid #e8e8e8;
+    }
+
+    @include respond-to('small') {
+        padding: $spacing * 4 0;
+
+        &__header {
+            margin: 0 0 $spacing * 4;
+
+            h3 {
+                @include text($txtBlack, $subtitle1 * 2, $fwRegular);
+            }
+        }
+    }
+}

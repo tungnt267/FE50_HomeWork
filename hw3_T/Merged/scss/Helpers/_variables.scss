@@ -1,0 +1,46 @@
+// CREATE THEME
+
+// BACKGROUND COLOR
+$bgPurple: #7f67f8;
+$bgBlack: #363d41;
+$bgBlack1: #0b0c11;
+$bgBlack2: #252525;
+$bgBlack3: #000000;
+$bgBlack4: #0b0c11;
+$bgWhite: #ffffff;
+$bgOrange: #f97c69;
+
+// TEXT COLOR
+$txtBlack: #2c363e;
+$textBlack1: #363d41;
+$textBlack2: #000000;
+$txtPurple: #7f67f8;
+$txtOrange: #f97c69;
+$txtGrey: #777777;
+$txtGrey1: #bfbfbf;
+$txtWhite: #ffffff;
+
+// FONT SIZES
+$h2: 48px;
+$h3: 40px;
+$h4: 22px;
+$h5: 24px;
+$h6: 20px;
+$subtitle1: 16px;
+$subtitle2: 14px;
+
+// FONT WEIGHTS
+$fwBold: 700;
+$fwMedium: 600;
+$fwRegular: 400;
+$fwLight: 300;
+
+// SPACING
+$spacing: 10px;
+
+// break points
+$breakpoints: ('extra-large': 1199px,
+    'large': 991px,
+    'medium': 767px,
+    'small': 575px,
+)

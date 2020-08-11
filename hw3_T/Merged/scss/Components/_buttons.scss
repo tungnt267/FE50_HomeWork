@@ -1,0 +1,30 @@
+.go-top {
+    position: fixed;
+    bottom: 8%;
+    right: 3%;
+    z-index: 9999;
+}
+
+.btn-aboutUs {
+    @include button($txtWhite, transparent, 2px solid $bgWhite, $fwRegular, $bgPurple, $bgPurple);
+    padding: $spacing - 2 $spacing * 3;
+}
+
+.btn-readMore {
+    @include button($txtWhite, $bgPurple, 2px solid $bgPurple, $fwRegular, transparent, $bgWhite);
+    padding: $spacing - 2 $spacing * 3;
+}
+
+.btn-contactUs {
+    @include button($txtWhite, $bgPurple, none, $fwRegular, $bgOrange, $bgWhite);
+    padding: 0.7em 2em;
+    letter-spacing: 2px;
+}
+
+.btn-email {
+    @include button($txtWhite, $bgPurple, none, $fwRegular, $bgPurple, $bgPurple);
+    padding: $spacing * 1.35 0;
+    float: right;
+    width: 12%;
+    cursor: pointer;
+}

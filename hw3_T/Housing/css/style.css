@@ -26,7 +26,7 @@
   font-size: 2.5rem;
 }
 .header__nav .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2846, 205, 205, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2846, 205, 205, 1.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .header__nav .nav-item::after {
   content: "";
@@ -160,10 +160,21 @@
   background-color: #efefef;
   border-top: 5px solid #00cdce;
 }
+.blog .card-body a {
+  text-decoration: none;
+}
 .blog .card-title {
   color: #00cdce;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
-.blog .card-text {
+.blog .card-body a:hover .card-title {
+  color: #000000;
+}
+.card-text {
   font-size: 15px;
   line-height: 26px;
 }
@@ -288,8 +299,6 @@
 }
 .portfolio__item:hover .portfolio__item__content {
   opacity: 1;
-}
-.modal__config {
 }
 /* END PORTFOLIO CSS*/
 
@@ -570,8 +579,11 @@
   .header__nav .nav-item::after {
     display: none;
   }
+  .carousel-section .carousel-caption {
+    top: 55%;
+  }
   .carousel-section .carousel-indicators {
-    /* display: none; */
+    display: none;
     position: absolute;
     bottom: 0.5em;
     left: 0;
@@ -581,8 +593,70 @@
   }
 }
 @media screen and (max-width: 575px) {
+  .carousel-section .carousel-caption {
+    top: 52%;
+  }
   .carousel-section .carousel-caption h4 {
     font-size: 20px;
   }
+  .carousel-section .carousel-caption p {
+    font-size: 16px;
+  }
+  .carousel-section .carousel-control-prev-icon,
+  .carousel-section .carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+  }
 }
+
+@media screen and (max-width: 375px) {
+  .title-h3 {
+    font-size: 2.5em;
+  }
+  .carousel-section .carousel-caption {
+    width: 70%;
+    top: 45%;
+  }
+  .carousel-section .carousel-caption h4 {
+    font-size: 14px;
+  }
+  .carousel-section .carousel-caption p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .carousel-section .carousel-control-prev-icon,
+  .carousel-section .carousel-control-next-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .video-play {
+    height: 200px;
+  }
+  .get-more__right {
+    max-height: 600px;
+  }
+  .portfolio__col {
+    min-width: 100%;
+  }
+  .portfolio__col .modal img {
+    width: 100%;
+  }
+  .subscribe {
+    background-color: #00cdce;
+    padding: 2em 0;
+  }
+  .subscribe__content input {
+    width: 100% !important;
+  }
+  .agents {
+    padding: 2em 0;
+  }
+  .agents__col {
+    min-width: 100% !important;
+  }
+  .contact__bottom {
+    padding: 2em 0;
+  }
+}
+
 /* END MEDIA QUERY */
