@@ -1,0 +1,160 @@
+.footer {
+    &__contact {
+        padding: $spacing * 8 0;
+        background-color: $bgBlack4;
+
+        &__subscribe {
+            padding-right: $spacing * 8;
+
+            h3 {
+                @include text($txtOrange, $subtitle2 * 2 - 2, $fwRegular);
+                margin-bottom: $spacing * 4;
+                letter-spacing: 2px;
+            }
+
+            p {
+                @include text($txtGrey1, $subtitle1, $fwRegular);
+                line-height: $subtitle1 * 2;
+                margin-bottom: $spacing * 3.2;
+                letter-spacing: 1px;
+            }
+
+            form {
+                border: 1px solid $bgWhite;
+                width: 100%;
+
+                input {
+                    outline: none;
+                    padding: $spacing * 1.5;
+                    color: $txtWhite;
+                    font-size: $subtitle2;
+                    width: 88%;
+                    border: none;
+                    background: rgba(0, 0, 0, 0.22);
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        &__links {
+            h3 {
+                @include text($txtOrange, $subtitle2 * 2 - 2, $fwRegular);
+                margin-bottom: $spacing * 4;
+                letter-spacing: 2px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    color: $txtWhite;
+                    margin-bottom: $spacing;
+
+                    a {
+                        color: $txtWhite;
+                        outline: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        &__info {
+            h3 {
+                @include text($txtOrange, $subtitle2 * 2 - 2, $fwRegular);
+                margin-bottom: $spacing * 4;
+                letter-spacing: 2px;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    color: $txtGrey1;
+                    letter-spacing: 1px;
+                    margin-bottom: $spacing * 1.5;
+
+                    span {
+                        margin-right: 13px;
+                        color: $txtOrange;
+                    }
+
+                    label {
+                        color: $txtGrey1;
+                    }
+
+                    a {
+                        color: $txtGrey1;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        background: $bgBlack2;
+        padding: $spacing * 1.6 0;
+        text-align: center;
+
+        p {
+            @include text($txtWhite, $subtitle1, $fwRegular);
+            line-height: $subtitle2 * 2;
+            letter-spacing: 2px;
+            margin: 0;
+
+            a {
+                color: $txtWhite;
+                text-decoration: underline;
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -ms-transition: all 0.5s;
+                -o-transition: all 0.5s;
+
+                &:hover {
+                    color: $txtOrange;
+                }
+            }
+        }
+    }
+
+    @include respond-to('large') {
+        &__contact {
+            &__subscribe {
+                padding: 0;
+            }
+
+            h3 {
+                font-size: $h5;
+            }
+        }
+    }
+
+    @include respond-to('medium') {
+        &__contact {
+            padding: $spacing * 4.8 0 $spacing * 3.2;
+
+            h3 {
+                margin-top: $spacing * 3;
+                margin-bottom: $spacing * 1.3;
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        &__contact {
+            padding: $spacing * 1.6 0 $spacing * 3.2;
+        }
+
+        &__copyright {
+            p {
+                font-size: $subtitle2;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.owl-dots {
+    margin: 0;
+
+    .owl-dot {
+        span {
+            background-color: $bgOrange !important;
+            opacity: 0.5;
+        }
+
+        &.active,
+        &:hover {
+            span {
+                opacity: 1;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

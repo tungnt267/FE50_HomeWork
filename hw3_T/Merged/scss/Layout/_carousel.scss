@@ -1,0 +1,193 @@
+.carousel-section {
+    position: relative;
+    background: url("../img/b1.jpg") no-repeat center center;
+    background-size: cover;
+    min-height: 700px;
+
+    .carousel-bg {
+        min-height: 700px;
+        background: rgba(0, 0, 0, 0.35);
+
+        .carousel__content {
+            position: relative;
+            padding: 14em 0 0;
+
+            .carousel-indicators {
+                margin: 0;
+                position: absolute;
+                bottom: -50%;
+                left: 0;
+
+                li {
+                    width: $spacing + 4;
+                    height: $spacing + 4;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    opacity: 1;
+                    background-color: $bgPurple;
+
+                    &.active {
+                        background-color: $bgWhite;
+                    }
+                }
+
+            }
+
+            .carousel-inner {
+                .carousel-item {
+                    >h2 {
+                        text-transform: uppercase;
+                        @include text($txtWhite, $h2, $fwRegular);
+                        text-align: center;
+                        margin: 0;
+                        letter-spacing: .2em;
+                        line-height: 1.4em;
+                    }
+
+                    >p {
+                        text-transform: capitalize;
+                        margin: $spacing * 2 auto $spacing * 4;
+                        @include text($txtWhite, $subtitle1, $fwRegular);
+                        text-align: center;
+                        line-height: $subtitle2 * 2;
+                        letter-spacing: 1px;
+                        width: 86%;
+                    }
+
+                    .modal-header {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .close {
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .modal-title {
+                            @include text($txtPurple, $subtitle2 * 2, $fwMedium)
+                        }
+                    }
+
+                    .modal-body {
+                        p {
+                            text-align: left;
+                            padding: $spacing + 4;
+                            margin: 0;
+                            @include text($txtGrey, $subtitle2, $fwRegular);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to('extra-large') {
+        .carousel-bg {
+            .carousel__content {
+                .carousel-inner {
+                    .carousel-item {
+                        >h2 {
+                            @include text($txtWhite, $h3, $fwRegular);
+                        }
+
+                        >P {
+                            @include text($txtWhite, $subtitle2, $fwRegular);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to('large') {
+        min-height: 560px;
+
+        .carousel-bg {
+            min-height: 560px;
+
+            .carousel__content {
+                padding: 8em 0 0;
+
+                .carousel-inner {
+
+                    .carousel-item {
+                        >h2 {
+                            @include text($txtWhite, $subtitle1 * 2 - 2, $fwRegular);
+                        }
+
+                        >P {
+                            @include text($txtWhite, $subtitle2, $fwRegular);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to('medium') {
+
+        .carousel-bg {
+
+            .carousel__content {
+                padding: 8em 0 0;
+
+                .carousel-inner {
+
+                    .carousel-item {
+                        >h2 {
+                            @include text($txtWhite, $h6, $fwRegular);
+                        }
+
+                        >P {
+                            @include text($txtWhite, $subtitle2, $fwRegular);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        min-height: 420px;
+
+        .carousel-bg {
+            min-height: 420px;
+
+            .carousel__content {
+                padding: 5em 0 0;
+
+                .carousel-inner {
+
+                    .carousel-item {
+                        >h2 {
+                            @include text($txtWhite, $h6 - 4, $fwRegular);
+                        }
+
+                        >P {
+                            // @include text($txtWhite, $subtitle2, $fwRegular);
+                            margin: $spacing 0 $spacing * 2;
+                            line-height: $spacing * 2;
+                            width: 100%;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-aboutUs {
+            font-size: $subtitle2 - 1;
+            padding: $spacing - 4 $spacing;
+        }
+
+        .btn-readMore {
+            font-size: $subtitle2 - 1;
+            padding: $spacing - 4 $spacing;
+        }
+    }
+
+}

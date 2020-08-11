@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Housing</title>
+    <!-- FONT GOOGLE -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <!-- [if lt IE 9]>
+      <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif] -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- GO TOP BUTTON -->
+    <section class="go-top">
+      <a href="#header"> <img src="./img/arrowup.png" alt="arrow-up" /></a>
+    </section>
+    <!-- END GO TOP BUTTON -->
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="row">
+        <div class="col">
+          <nav
+            class="navbar navbar-expand-md navbar-dark header__nav"
+            id="headerNav"
+          >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html">
+                <h1>Hous<span>ing</span></h1>
+              </a>
+              <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-toggle="collapse"
+                data-target="#myNavbar"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav text-center ml-md-auto">
+                  <li class="nav-item ml-md-3 ml-lg-5 active">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item ml-md-3 ml-lg-5">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item ml-md-3 ml-lg-5">
+                    <a class="nav-link" href="#blog">Blog</a>
+                  </li>
+                  <li class="nav-item ml-md-3 ml-lg-5">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                  </li>
+                  <li class="nav-item ml-md-3 ml-lg-5">
+                    <a class="nav-link" href="#agents">Agents</a>
+                  </li>
+                  <li class="nav-item ml-md-3 ml-lg-5">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- CAROUSEL -->
+    <section class="carousel-section">
+      <div
+        id="myCarousel"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#myCarousel"
+            data-slide-to="0"
+            class="active mx-2"
+          ></li>
+          <li data-target="#myCarousel" data-slide-to="1" class="mx-2"></li>
+          <li data-target="#myCarousel" data-slide-to="2" class="mx-2"></li>
+          <li data-target="#myCarousel" data-slide-to="3" class="mx-2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img src="./img/b1.jpg" class="w-100" alt="b1" />
+            <div class="carousel-caption text-center">
+              <h4 class="font-weight-bold">LOREM IPSUM AMET</h4>
+              <p>
+                Lorem ipsum dolor sit, consectetur adiping elit.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/b2.jpg" class="w-100" alt="b2" />
+            <div class="carousel-caption text-center">
+              <h4 class="font-weight-bold">DOLOR SIT HATANT MORBI</h4>
+              <p>
+                Quis autem vel eum iure reprehenderit quivol.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/b3.jpg" class="w-100" alt="b3" />
+            <div class="carousel-caption text-center">
+              <h4 class="font-weight-bold">QUIS AUTEM VE EUM IURE</h4>
+              <p>
+                Excepteur sint ocecat cupid proident, deserunt.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/b4.jpg" class="w-100" alt="b4" />
+            <div class="carousel-caption text-center">
+              <h4 class="font-weight-bold">VOLUPTATE VELIT ESSE</h4>
+              <p>
+                Quis autem velreprehenderit qui ea.eum iure
+              </p>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#myCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#myCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- END CAROUSEL -->
+
+    <!-- ABOUT -->
+    <section class="about py-5" id="about">
+      <div class="container pt-5">
+        <h1 class="title-h3">About</h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="about__item text-center">
+              <i
+                class="fa fa-home p-4 mb-3 border rounded-circle border-secondary"
+              ></i>
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="about__item text-center">
+              <i
+                class="fa fa-key p-4 mb-3 border rounded-circle border-secondary"
+              ></i>
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="about__item text-center">
+              <i
+                class="fa fa-money p-4 mb-3 border rounded-circle border-secondary"
+              ></i>
+              <p class="text-secondary">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                labore et dolore magna aliqua.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="about-us text-center">
+              <h3 class="font-weight-bold mb-3">About us</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+                sed odio consequat, tristique elit sed, molestie nulla. Mauris
+                et quam leo. Quisque tincidunt facilisis rutrum. Etiam mattis
+                arcu vitae velit sagittis vehicula. Duis posuere ex in mollis
+                iaculis. Suspendisse tincidunt ut velit id euismod.vulputate
+                turpis porta ex sodales, dignissim hendrerit eros sagittis.
+                Curabitur lacinia dui ut luctus congue. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. Cras quis
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END ABOUT -->
+
+    <!-- STATISTIC -->
+    <section class="stats py-5">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="stats__title">
+              <h1 class="title-h3">Stats</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 col-lg-3">
+            <div class="stats__item">
+              <h2 class="text-white">3500</h2>
+              <p>clients</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stats__item">
+              <h2 class="text-white">650</h2>
+              <p>Plans</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stats__item">
+              <h2 class="text-white">1021</h2>
+              <p>projects</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stats__item">
+              <h2 class="text-white">1010</h2>
+              <p>Likes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END STATISTIC -->
+
+    <!-- BLOG -->
+    <section class="blog" id="blog">
+      <div class="container py-5">
+        <h1 class="title-h3">Blog</h1>
+        <div class="row">
+          <div class="col-sm-12 col-md-4 mb-3">
+            <div class="card">
+              <img src="./img/g1.jpg" class="card-img-top" alt="g1" />
+              <div class="card-body">
+                <a href="#" data-toggle="modal" data-target="#myModal">
+                  <h5 class="card-title">Lorem Ipsum Passage,</h5>
+                </a>
+                <p class="card-text">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium
+                </p>
+                <div class="modal-link">
+                  <!-- Button to Open the Modal -->
+                  <button
+                    type="button"
+                    class="btn btn-read-more"
+                    data-toggle="modal"
+                    data-target="#myModal"
+                  >
+                    Read more..
+                  </button>
+
+                  <!-- The Modal -->
+                  <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title text-white text-center">
+                            Housing
+                          </h4>
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="modal"
+                          >
+                            <i class="fa fa-close"></i>
+                          </button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <img src="./img/img2.jpg" alt="img2" class="w-100" />
+                          <p>
+                            Ut enim ad minima veniam, quis nostrum
+                            exercitationem ullam corporis suscipit laboriosam,
+                            nisi ut aliquid ex ea commodi consequatur? Quis
+                            autem vel eum iure reprehenderit qui in ea voluptate
+                            velit esse quam nihil molestiae consequatur, vel
+                            illum qui dolorem eum fugiat quo voluptas nulla
+                            pariatur.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3">
+            <div class="card">
+              <img src="./img/g2.jpg" class="card-img-top" alt="g2" />
+              <div class="card-body">
+                <a href="#" data-toggle="modal" data-target="#myModal">
+                  <h5 class="card-title">Lorem Ipsum Passage,</h5>
+                </a>
+                <p class="card-text">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium
+                </p>
+                <div class="modal-link">
+                  <!-- Button to Open the Modal -->
+                  <button
+                    type="button"
+                    class="btn btn-read-more"
+                    data-toggle="modal"
+                    data-target="#myModal"
+                  >
+                    Read more..
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 mb-3">
+            <div class="card">
+              <img src="./img/g1.jpg" class="card-img-top" alt="g1" />
+              <div class="card-body">
+                <a href="#" data-toggle="modal" data-target="#myModal">
+                  <h5 class="card-title">Lorem Ipsum Passage,</h5>
+                </a>
+                <p class="card-text">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium
+                </p>
+                <div class="modal-link">
+                  <!-- Button to Open the Modal -->
+                  <button
+                    type="button"
+                    class="btn btn-read-more"
+                    data-toggle="modal"
+                    data-target="#myModal"
+                  >
+                    Read more..
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END BLOG -->
+
+    <!-- GET MORE -->
+    <section class="get-more" id="getMore">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5 px-0">
+            <div class="video-play">
+              <button
+                type="button"
+                data-toggle="modal"
+                data-target="#videoPlay"
+              >
+                <i class="fa fa-play-circle"></i>
+              </button>
+              <!-- The Modal -->
+              <div class="modal" id="videoPlay">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                      <video
+                        src="./media/intro.mp4"
+                        controls
+                        autoplay
+                        muted
+                        class="w-100"
+                      ></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 get-more__right">
+            <div class="get-more__text text-center py-4 px-md-1 px-lg-5">
+              <h2>Get More..</h2>
+              <p class="text-white py-3 py-lg-4 m-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut minim veniam, labore et dolore
+                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi esse quam nihil molestiae consequatur, vel
+                illum qui dolorem eum fugiat quo voluptas nulla pariatur.
+              </p>
+              <div class="modal-link w-100">
+                <!-- Button to Open the Modal -->
+                <button
+                  type="button"
+                  class="btn btn-read-more"
+                  data-toggle="modal"
+                  data-target="#myModal"
+                >
+                  Read more..
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END GET MORE -->
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio py-5" id="portfolio">
+      <div class="container">
+        <h3 class="title-h3">Portfolio</h3>
+        <div class="row">
+          <div class="col-6 col-md-4 portfolio__col">
+            <div class="portfolio__item">
+              <img src="./img/img1.jpg" alt="img1" class="img-fluid" />
+              <a data-toggle="modal" data-target="#portfolio_1">
+                <div class="portfolio__item__content">
+                  <h3>GALLERY</h3>
+                  <p>Lorem Ipsum is simply dummy</p>
+                </div>
+              </a>
+              <!-- The Modal -->
+              <div class="modal" id="portfolio_1">
+                <div class="modal-dialog mt-5">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="./img/img1.jpg" alt="img1" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 portfolio__col">
+            <div class="portfolio__item">
+              <img src="./img/img2.jpg" alt="img2" class="img-fluid" />
+              <a data-toggle="modal" data-target="#portfolio_2">
+                <div class="portfolio__item__content">
+                  <h3>GALLERY</h3>
+                  <p>Lorem Ipsum is simply dummy</p>
+                </div>
+              </a>
+              <!-- The Modal -->
+              <div class="modal" id="portfolio_2">
+                <div class="modal-dialog mt-5">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="./img/img2.jpg" alt="img2" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 portfolio__col">
+            <div class="portfolio__item">
+              <img src="./img/img6.jpg" alt="img6" class="img-fluid" />
+              <a data-toggle="modal" data-target="#portfolio_3">
+                <div class="portfolio__item__content">
+                  <h3>GALLERY</h3>
+                  <p>Lorem Ipsum is simply dummy</p>
+                </div>
+              </a>
+              <!-- The Modal -->
+              <div class="modal" id="portfolio_3">
+                <div class="modal-dialog mt-5">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="./img/img6.jpg" alt="img6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 portfolio__col">
+            <div class="portfolio__item">
+              <img src="./img/img4.jpg" alt="img4" class="img-fluid" />
+              <a data-toggle="modal" data-target="#portfolio_4">
+                <div class="portfolio__item__content">
+                  <h3>GALLERY</h3>
+                  <p>Lorem Ipsum is simply dummy</p>
+                </div>
+              </a>
+              <!-- The Modal -->
+              <div class="modal" id="portfolio_4">
+                <div class="modal-dialog mt-5">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="./img/img4.jpg" alt="img4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 portfolio__col">
+            <div class="portfolio__item">
+              <img src="./img/img5.jpg" alt="img5" class="img-fluid" />
+              <a data-toggle="modal" data-target="#portfolio_5">
+                <div class="portfolio__item__content">
+                  <h3>GALLERY</h3>
+                  <p>Lorem Ipsum is simply dummy</p>
+                </div>
+              </a>
+              <!-- The Modal -->
+              <div class="modal" id="portfolio_5">
+                <div class="modal-dialog mt-5">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="./img/img5.jpg" alt="img5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 portfolio__col">
+            <div class="portfolio__item">
+              <img src="./img/img3.jpg" alt="img3" class="img-fluid" />
+              <a data-toggle="modal" data-target="#portfolio_6">
+                <div class="portfolio__item__content">
+                  <h3>GALLERY</h3>
+                  <p>Lorem Ipsum is simply dummy</p>
+                </div>
+              </a>
+              <!-- The Modal -->
+              <div class="modal" id="portfolio_6">
+                <div class="modal-dialog mt-5">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="./img/img3.jpg" alt="img3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END PORTFOLIO -->
+
+    <!-- SUBSCRIBE -->
+    <section class="subscribe" id="subscribe">
+      <div class="container text-center subscribe__content">
+        <h3 class="title-h3">Subcribe</h3>
+        <p>
+          consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+          pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi
+        </p>
+        <input type="email" placeholder="Email" class="w-50 mb-3" />
+        <button class="btn d-block m-auto">Click</button>
+      </div>
+    </section>
+    <!-- END SUBSCRIBE -->
+
+    <!-- OUR AGENTS -->
+    <section class="agents" id="agents">
+      <div class="container">
+        <h3 class="title-h3">Our Agents</h3>
+        <div class="row">
+          <div class="col-6 col-lg-3 agents__col">
+            <div class="agents__info">
+              <img src="./img/t1.jpg" alt="t1" class="w-100" />
+              <div class="agents__caption">
+                <h4>kat wally</h4>
+                <p>Lorem Ipsum</p>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-rss"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 agents__col">
+            <div class="agents__info">
+              <img src="./img/t2.jpg" alt="t2" class="w-100" />
+              <div class="agents__caption">
+                <h4>john max</h4>
+                <p>Lorem Ipsum</p>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-rss"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 agents__col">
+            <div class="agents__info">
+              <img src="./img/t3.jpg" alt="t3" class="w-100" />
+              <div class="agents__caption">
+                <h4>roy kent</h4>
+                <p>Lorem Ipsum</p>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-rss"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 agents__col">
+            <div class="agents__info">
+              <img src="./img/t4.jpg" alt="t4" class="w-100" />
+              <div class="agents__caption">
+                <h4>joy idson</h4>
+                <p>Lorem Ipsum</p>
+                <ul>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-rss"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OUR AGENTS -->
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <div class="contact__top">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d245367.85425904105!2d107.93769695094693!3d16.072093197532215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314219c792252a13%3A0x1df0cb4b86727e06!2zxJDDoCBO4bq1bmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1596545529692!5m2!1svi!2s"
+          frameborder="0"
+          style="border: 0;"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+      <div class="contact__bottom" id="contact">
+        <div class="container">
+          <h3 class="title-h3">Contact Us</h3>
+          <div class="contact__form">
+            <form action="#">
+              <div class="row">
+                <div class="col-sm-6">
+                  <input type="text" placeholder="Name" class="contact__item" />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    class="contact__item"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="contact__item"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Phone"
+                    class="contact__item mb-sm-0"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <textarea
+                    placeholder="Message"
+                    class="contact__item textarea"
+                    rows="8"
+                  ></textarea>
+                  <input type="submit" value="Submit" class="btn-submit" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CONTACT -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row align-items-center text-center">
+          <div class="col-lg-7">
+            <div class="footer__copyright \">
+              <p>
+                © 2017 Housing. All Rights Reserved | Design by
+                <a href="http://w3layouts.com/" target="_blank"> W3layouts </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="footer__nav">
+              <ul class="m-0">
+                <li>
+                  <a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-rss"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-vk"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

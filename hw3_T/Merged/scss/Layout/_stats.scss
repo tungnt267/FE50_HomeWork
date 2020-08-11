@@ -1,0 +1,91 @@
+.stats {
+    padding: $spacing * 8 0;
+
+    .container {
+        >h4 {
+            @include text($txtBlack, $h3, $fwRegular);
+            width: 65%;
+            text-align: center;
+            line-height: 1.2em;
+            margin: 0 auto;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        >p {
+            @include text($txtGrey, $subtitle1, $fwRegular);
+            margin: 1em 0 5em;
+            text-align: center;
+        }
+
+        .stats__item {
+            text-align: center;
+
+            p {
+                @include text($txtOrange, $subtitle2 * 4, $fwBold);
+                letter-spacing: 2px;
+                margin-bottom: $spacing
+            }
+
+            h3 {
+                @include text($txtBlack, $h6, $fwMedium);
+                letter-spacing: 2px;
+            }
+
+            h6 {
+                @include text($txtGrey, $subtitle1, $fwRegular);
+                margin: $spacing + 2 0 0 0;
+            }
+        }
+    }
+
+    @include respond-to('large') {
+        padding: $spacing * 4.8 0;
+
+        .container {
+            >h4 {
+                width: 100%;
+            }
+
+            .stats__item {
+                p {
+                    @include text($txtOrange, $h4 * 2, $fwBold);
+                }
+            }
+        }
+    }
+
+    @include respond-to('medium') {
+        .container {
+            >p {
+                margin: $spacing * 1.5 $spacing * 4.5;
+            }
+
+            .stats__item {
+                p {
+                    @include text($txtOrange, $h3 - 5, $fwBold);
+                }
+            }
+        }
+    }
+
+    @include respond-to('small') {
+        padding: $spacing * 4 0;
+
+        .container {
+            >h4 {
+                @include text($txtBlack, $subtitle1 * 2, $fwRegular);
+
+            }
+
+            .stats__item {
+                h3 {
+                    @include text($txtBlack, $subtitle2, $fwMedium);
+                }
+
+                h6 {
+                    margin-bottom: $spacing * 2;
+                }
+            }
+        }
+    }
+}

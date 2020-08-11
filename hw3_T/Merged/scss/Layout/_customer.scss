@@ -1,0 +1,53 @@
+.customer {
+    text-align: center;
+    padding: 5em 0;
+
+    &__header {
+        margin-bottom: 5em;
+
+        h3 {
+            @include text($txtBlack, $h2, $fwRegular);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        p {
+            @include text($txtGrey, $subtitle1, $fwRegular);
+            margin: $spacing * 2 auto;
+            line-height: 1.8em;
+            letter-spacing: 1px;
+        }
+    }
+
+    .owl-carousel {
+
+        &:hover {
+            cursor: move;
+        }
+
+        .customer__item {
+            padding: $spacing * 4 $spacing;
+            margin-right: $spacing;
+
+            img {
+                border-radius: 50%;
+                width: 110px;
+                background: $bgPurple;
+                padding: $spacing / 2;
+                display: inline-block;
+            }
+
+            h3 {
+                @include text($txtBlack, $h6, $fwMedium);
+                margin: $spacing * 2 0 0;
+                letter-spacing: 2px;
+            }
+
+            p {
+                @include text($txtGrey, $subtitle1, $fwRegular);
+                margin: $spacing 0;
+                line-height: 24px;
+            }
+
+        }
+    }
+}
