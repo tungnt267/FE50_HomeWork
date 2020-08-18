@@ -1,11 +1,11 @@
 function getDaysInMonth() {
-  var month = parseInt(document.getElementById("month").value);
-  var year = parseInt(document.getElementById("year").value);
+  var month = +document.getElementById("month").value;
+  var year = +document.getElementById("year").value;
   var resDay = document.getElementById("resDay");
   var resYear = document.getElementById("resYear");
   var dayFebruary =
     (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 29 : 28;
-  if (!year || isNaN(year)) {
+  if (!year || !Number.isInteger(year) || year < 0) {
     resYear.style.display = "block";
     resYear.innerHTML = "Invalid Year!";
   } else {
