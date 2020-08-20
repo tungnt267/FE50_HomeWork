@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Currency Converter</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="currency-convert">
+      <div class="container text-center">
+        <h1 class="title my-5">Currency Converter</h1>
+        <form class="form-inline d-flex justify-content-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="dollar" class="mr-2 dollar">$</label>
+            <input
+              type="text"
+              class="form-control"
+              id="dollar"
+              placeholder="Dollar"
+            />
+          </div>
+          <button
+            type="button"
+            id="btnConvert"
+            onclick="dollarConverter()"
+            class="btn btn-primary mb-2"
+          >
+            Convert
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

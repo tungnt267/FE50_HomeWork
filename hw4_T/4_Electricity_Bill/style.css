@@ -1,0 +1,8 @@
+.result {
+  color: blue;
+  width: 50%;
+  margin: auto;
+  padding: 10px 0;
+  background-color: yellow;
+  display: none;
+}

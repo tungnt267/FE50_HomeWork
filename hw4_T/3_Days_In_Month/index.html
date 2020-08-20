@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Days In Month</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="day-month">
+      <div class="container text-center">
+        <h1 class="title my-5">Days In Month</h1>
+        <form class="form-inline d-flex justify-content-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="month" class="mr-2 month">Month</label>
+            <input
+              type="text"
+              class="form-control"
+              id="month"
+              placeholder="Enter a month ..."
+            />
+          </div>
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="year" class="mr-2 year">Year</label>
+            <input
+              type="text"
+              class="form-control"
+              id="year"
+              placeholder="Enter a year ..."
+            />
+          </div>
+          <button
+            type="button"
+            id="btnConvert"
+            onclick="main()"
+            class="btn btn-primary mb-2"
+          >
+            Check
+          </button>
+        </form>
+        <div class="result mt-4" id="resDay"></div>
+        <div class="result mt-1" id="resYear"></div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Electricity Bill</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="currency-convert">
+      <div class="container text-center">
+        <h1 class="title my-5">Electricity Bill</h1>
+        <form class="form-inline d-flex justify-content-center">
+          <div class="form-group mx-sm-3 mb-2">
+            <label for="numberOfKwh" class="mr-2 dollar">KWh</label>
+            <input
+              type="text"
+              class="form-control"
+              id="numberOfKwh"
+              placeholder="Number Of KWh"
+            />
+          </div>
+          <button
+            type="button"
+            id="btnBill"
+            onclick="main()"
+            class="btn btn-primary mb-2"
+          >
+            Bill
+          </button>
+        </form>
+        <div class="result mt-4" id="result"></div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
