@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My Tasks</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12">
+          <img src="./img/mytasks.png" alt="my-tasks" class="img-fluid" />
+          <div class="my-3" id="getCurrTime"></div>
+          <form class="form-group form-inline mb-5">
+            <input type="text" id="taskId" class="d-none" />
+            <input
+              type="text"
+              name="taskTitle"
+              id="taskTitle"
+              placeholder="Enter an activity"
+              class="form-control new-task text-input"
+              onkeyup="addTaskEnter(event)"
+            />
+            <button
+              type="button"
+              class="btn rounded-circle btn-add"
+              id="btnAdd"
+              onclick="addTask()"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              class="btn btn-update rounded-circle"
+              id="btnUpdate"
+              onclick="updateTask()"
+            >
+              <i class="fa fa-save"></i>
+            </button>
+            <button class="d-none" type="reset" id="btnReset"></button>
+            <span class="title-error pt-3" id="titleError"></span>
+          </form>
+          <table class="table tbl-task" id="tblTask">
+            <tbody id="tbodyTask"></tbody>
+          </table>
+          <hr class="w-50" />
+          <table class="table tbl-completed" id="tblCompleted">
+            <tbody id="tbodyCompleted"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="./js/Task.js"></script>
+    <script src="./js/Main.js"></script>
+    <script>
+      const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      var n = new Date();
+      var y = n.getFullYear();
+      var d = n.getDate();
+      document.getElementById("getCurrTime").innerHTML =
+        monthNames[n.getMonth()] + " " + d + ", " + y;
+    </script>
+  </body>
+</html>
