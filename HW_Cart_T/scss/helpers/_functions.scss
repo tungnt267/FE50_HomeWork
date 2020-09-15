@@ -1,0 +1,39 @@
+@function getBg($color) {
+    @if (map-has-key($map: $background, $key: $color)) {
+        @return map-get($map: $background, $key: $color);
+    }
+
+    @warn "Key is not exist in map";
+}
+
+@function getColor($color) {
+    @if (map-has-key($map: $txtColor, $key: $color)) {
+        @return map-get($map: $txtColor, $key: $color);
+    }
+
+    @warn "Key is not exist in map";
+}
+
+@function getFz($fSize) {
+    @if (map-has-key($map: $fontSize, $key: $fSize)) {
+        @return map-get($map: $fontSize, $key: $fSize);
+    }
+
+    @warn "Key is not exist in map";
+}
+
+@function getFw($fWeight) {
+    @if (map-has-key($map: $fontWeight, $key: $fWeight)) {
+        @return map-get($map: $fontWeight, $key: $fWeight);
+    }
+
+    @warn "Key is not exist in map";
+}
+
+@function spacing($x, $y: null) {
+    @if($y==null) {
+        @return $x * $spacing;
+    }
+
+    @return $x * $spacing $y * $spacing;
+}

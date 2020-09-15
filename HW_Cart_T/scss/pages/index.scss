@@ -1,0 +1,12 @@
+@import '../bases/reset';
+@import '../bases/normalized';
+
+@import '../helpers/variables';
+@import '../helpers/mixins';
+@import '../helpers/functions';
+
+@import '../components/header';
+@import '../components/carousel';
+@import '../components/movietimes';
+
+@import '../components/buttons';
