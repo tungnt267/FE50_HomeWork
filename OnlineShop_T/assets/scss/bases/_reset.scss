@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.swal-modal {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.swal-title {
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.swal-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
