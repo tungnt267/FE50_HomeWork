@@ -1,3 +1,7 @@
+/**
+ * @author Thanh Tung
+ */
+
 let productsCart = [];
 
 fetchCart = () => {
@@ -65,7 +69,7 @@ renderCart = (data) => {
           </td>
           <td class="item-total">$${product.price * product.quantity}</td>
           <td>
-            <button class="btn btn-danger btn-delete id="delete_${product.id}
+            <button class="btn btn-danger btn-delete id="delete_${product.id}"
             onclick="deleteCart('delete_${product.id}')"
             ">x</button>
           </td>

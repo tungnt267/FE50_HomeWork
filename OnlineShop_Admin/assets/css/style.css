@@ -7,6 +7,9 @@
   color: red;
   margin-left: 2px; }
 
+.form-group {
+  margin-bottom: 10px; }
+
 .show-data .search {
   border: 1px solid grey;
   width: 50%;

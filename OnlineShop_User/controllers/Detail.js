@@ -1,3 +1,7 @@
+/**
+ * @author Thanh Tung
+ */
+
 let productDetail;
 let prodQuantity = 1;
 
@@ -15,11 +19,14 @@ fetchProductDetail = () => {
     })
     .catch(function (err) {
       console.log(err);
+      if (!productDetail) {
+        window.location.replace("index.html");
+      }
     });
 };
 
 renderDetails = () => {
-  var htmlContent = "";
+  let htmlContent = "";
   htmlContent += `
     <div class="col-6 col-sm-7 col-lg-6">
       <div class="group-images">
@@ -29,15 +36,14 @@ renderDetails = () => {
           />
         </a>
         <div class="thumbnail text-right pr-5">
-          <div class="container img-zoom-container ">
-            <a href="#">
+          <div class="container ">
+            <div class="magnify">
               <img
-                class="img-origin"
-                id="myImage"
                 src="${productDetail.image}"
+                class="small"
               />
-            </a>
-            <div id="myResult" class="img-zoom-result"></div>
+              <div class="large" id="largeImg"></div>
+            </div>
           </div>
           <div class="thumbnail-tut text-center">
             <i class="fa fa-search-plus"></i>
@@ -100,9 +106,19 @@ renderDetails = () => {
     </div>
     `;
   document.getElementById("productDetail").innerHTML = htmlContent;
-  imageZoom("myImage", "myResult");
+  document.getElementById(
+    "largeImg"
+  ).style.backgroundImage = `url('${productDetail.image}')`;
+
+  zoomImage();
   setStyleQuantity();
   getQuantityTotal();
+};
+
+// Zoom Product
+zoomImage = () => {
+  let zoom = new Zoom();
+  zoom.zoomImage();
 };
 
 mapProductDetail = (data, product) => {

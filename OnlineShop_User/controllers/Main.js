@@ -1,5 +1,5 @@
 /**
- * Author: Thanh Tung
+ * @author Thanh Tung
  *
  * App: Online Shopping
  */
@@ -7,9 +7,9 @@
 let productList = [];
 let currentPage = 1;
 
+// Fetch Products List
 fetchProductList = () => {
   axios({
-    // url: `https://5bd2959ac8f9e400130cb7e9.mockapi.io/api/products`,
     url: `https://5f54430fe5de110016d51eb9.mockapi.io/api/products`,
     method: "GET",
     data: null,
@@ -23,6 +23,24 @@ fetchProductList = () => {
     });
 };
 
+// Map Data
+mapData = (data, arr) => {
+  for (let product of data) {
+    const newProduct = new Product(
+      product.id,
+      product.name,
+      product.image,
+      product.description,
+      product.price,
+      product.inventory,
+      product.rating,
+      product.type
+    );
+    arr.push(newProduct);
+  }
+};
+
+// Render Products List
 renderProductList = (data) => {
   data = data || productList;
   let htmlContent = "";
@@ -66,7 +84,7 @@ renderProductList = (data) => {
     htmlContent += `
         <div class="col-md-6 col-lg-4 mb-3">
             <div class="product__item card">
-              <a href="./detail.html?id=${data[i].id}" target="_blank">    
+              <a href="./detail.html?id=${data[i].id}">    
               <img
                 class="card-img-top"
                 src="${data[i].image}"
@@ -74,8 +92,7 @@ renderProductList = (data) => {
               </a>
               <div class="card-body">
                 <h6 class="mb-0 mt-3">ID: ${data[i].id}</h6>
-                <a class="product_link" href="./detail.html?id=${data[i].id}"
-                  target="_blank">    
+                <a class="product_link" href="./detail.html?id=${data[i].id}">    
                   <h4 class="card-title product__name my-1">${data[i].name}</h4>
                 </a>
                 <div class="product__price">
@@ -84,8 +101,7 @@ renderProductList = (data) => {
                 <a 
                   href="./detail.html?id=${data[i].id}"
                   class="btn btn-detail"
-                  id="btnDetail"
-                  target="_blank">
+                  id="btnDetail">
                     <i class="fa fa-search-plus"></i>
                     <p>Details</p>
                 </a>
@@ -196,6 +212,7 @@ switchItemPage = () => {
 
 // Find product name
 findProduct = () => {
+  currentPage = 1;
   let result = [];
   // Input: keyword
   let keyword = document.getElementById("txtSearch").value;
@@ -337,6 +354,8 @@ showSortIcon = () => {
 fetchProductList();
 
 let productsCart = [];
+
+// Fetch Products Cart In LocalStorage
 fetchCart = () => {
   const localProductsCart = localStorage.getItem("productsCart");
   if (localProductsCart) {
@@ -344,6 +363,7 @@ fetchCart = () => {
   }
 };
 
+// Map Products Cart
 mapCart = (data, arr) => {
   for (let product of data) {
     let newProduct = new Product(
@@ -416,6 +436,7 @@ addToCart = (idButton) => {
   });
 };
 
+// Save Products Cart
 saveCart = (product) => {
   let localProductsCart = localStorage.getItem("productsCart");
   if (localProductsCart) {
@@ -425,6 +446,7 @@ saveCart = (product) => {
   localStorage.setItem("productsCart", JSON.stringify(productsCart));
 };
 
+// Calc And Show Quantity Total
 getQuantityTotal = () => {
   let quantityTotal = 0;
   for (const product of productsCart) {
@@ -439,22 +461,7 @@ getQuantityTotal = () => {
   }
 };
 
-mapData = (data, arr) => {
-  for (let product of data) {
-    const newProduct = new Product(
-      product.id,
-      product.name,
-      product.image,
-      product.description,
-      product.price,
-      product.inventory,
-      product.rating,
-      product.type
-    );
-    arr.push(newProduct);
-  }
-};
-
+// Find Product By ID
 findById = (idProduct, data) => {
   for (let product of data) {
     if (product.id === idProduct) {
@@ -463,10 +470,12 @@ findById = (idProduct, data) => {
   }
 };
 
+// Add Class Box Shadow
 addBoxShadow = () => {
   document.getElementById("productSearch").classList.add("box-shadow-search");
 };
 
+// Remove Class Box Shadow
 removeBoxShadow = () => {
   document
     .getElementById("productSearch")

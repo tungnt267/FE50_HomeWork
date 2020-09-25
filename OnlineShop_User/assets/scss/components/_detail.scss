@@ -31,39 +31,6 @@
                     color: #999999;
                 }
             }
-
-            .img-zoom-container {
-                position: relative;
-
-                .img-zoom-lens {
-                    position: absolute;
-                    border: 1px solid #d4d4d4;
-                    width: 180px;
-                    height: 180px;
-                    opacity: 0;
-                }
-
-                .img-zoom-result {
-                    position: absolute;
-                    border: 1px solid #189eff;
-                    width: 500px;
-                    height: 500px;
-                    top: 5%;
-                    left: 100%;
-                    z-index: 3;
-                    visibility: hidden;
-                }
-
-                &:hover {
-                    .img-zoom-lens {
-                        opacity: 1;
-                    }
-
-                    .img-zoom-result {
-                        visibility: visible;
-                    }
-                }
-            }
         }
     }
 
@@ -175,19 +142,6 @@
                 img {
                     max-width: 350px;
                 }
-
-                .img-zoom-container {
-                    .img-zoom-lens {
-                        width: 150px;
-                        height: 150px;
-                    }
-
-                    .img-zoom-result {
-                        width: 380px;
-                        height: 380px;
-                        left: 78%;
-                    }
-                }
             }
         }
 
@@ -220,20 +174,6 @@
 
                 img {
                     max-width: 270px;
-                }
-
-                .img-zoom-container {
-                    .img-zoom-lens {
-                        width: 100px;
-                        height: 100px;
-                    }
-
-                    .img-zoom-result {
-                        width: 380px;
-                        height: 380px;
-                        top: 100%;
-                        left: 10%;
-                    }
                 }
 
                 .thumbnail-tut {
@@ -287,14 +227,6 @@
                     max-width: 160px;
                 }
 
-                .img-zoom-container {
-                    .img-zoom-result {
-                        width: 320px;
-                        height: 320px;
-                        left: 0;
-                    }
-                }
-
                 .thumbnail-tut {
                     font-size: 12px;
                     padding-right: 20px;
@@ -342,14 +274,6 @@
 
                 img {
                     max-width: 120px;
-                }
-
-                .img-zoom-container {
-                    .img-zoom-result {
-                        width: 250px;
-                        height: 250px;
-                        left: -5%;
-                    }
                 }
 
                 .thumbnail-tut {

@@ -1,3 +1,7 @@
+/**
+ * @author Thanh Tung
+ */
+
 class Product {
   constructor(id, name, image, description, price, inventory, rating, type) {
     this.id = id;

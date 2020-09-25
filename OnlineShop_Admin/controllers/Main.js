@@ -1,7 +1,12 @@
+/**
+ * @author Thanh Tung
+ */
+
 const linkAPI = `https://5f54430fe5de110016d51eb9.mockapi.io/api/products`;
 let productList = [];
 let currentPage = 1;
 
+// Fetch Data
 fetchProductList = () => {
   axios({
     url: linkAPI,
@@ -17,8 +22,35 @@ fetchProductList = () => {
     });
 };
 
+// Render Data
 renderProductList = (data) => {
   data = data || productList;
+  let htmlContent = "";
+
+  if (productList.length === 0) {
+    document.getElementById("pageSection").style.display = "none";
+  } else {
+    document.getElementById("pageSection").style.display = "block";
+  }
+
+  if (data.length === 0 && data !== productList) {
+    document.getElementById("pageSection").style.display = "none";
+    const txtSearch = document.getElementById("txtSearch").value;
+    if (txtSearch.trim().length === 0) {
+      htmlContent = "";
+    } else {
+      htmlContent = `
+        <tr>
+          <td class="text-center pt-5" colspan="8">
+            <h4>No results for ${txtSearch}.</h4>
+            <p>Try checking your spelling or use more general terms</p>
+          </td>
+        </tr>
+    `;
+    }
+  } else {
+    document.getElementById("pageSection").style.display = "block";
+  }
 
   // Pagination
   paginationProduct(data);
@@ -31,7 +63,6 @@ renderProductList = (data) => {
   }
 
   // Render Product List
-  let htmlContent = "";
   for (let i = startOfPage; i < endOfPage; i++) {
     htmlContent += `
       <tr>
@@ -162,9 +193,11 @@ switchItemPage = () => {
 document.getElementById("btnAddNew").addEventListener("click", () => {
   document.getElementById("modalTitle").innerHTML = "Add New Product";
   document.getElementById("btnHandle").innerHTML = `
-      <button type="button" class="btn btn-success" onclick="addProduct()">Add Product</button>
+      <button type="button" class="btn btn-success"
+      onclick="addProduct()">Add Product</button>
       `;
   document.getElementById("btnReset").click();
+  clearErrorMessage();
 });
 
 // Add New Product
@@ -178,31 +211,54 @@ addProduct = () => {
   const rating = document.getElementById("rating").value;
   const type = document.getElementById("type").value;
 
-  let newProduct = new Product(
-    id,
-    name,
-    image,
-    description,
-    price,
-    inventory,
-    rating,
-    type
-  );
+  // Validation Form
+  let isValid = true;
+  isValid &= checkRequired(id, "idError") && checkExistsId(id);
+  isValid &= checkRequired(name, "nameError");
+  isValid &= checkRequired(image, "imageError");
+  isValid &= checkRequired(description, "desError");
+  isValid &= checkRequired(price, "priceError");
+  isValid &= checkRequired(inventory, "invError");
+  isValid &=
+    checkRequired(rating, "ratingError") && checkRating(rating, "ratingError");
+  isValid &= checkRequired(type, "typeError");
 
-  axios({
-    url: linkAPI,
-    method: "POST",
-    data: newProduct,
-  })
-    .then((res) => {
-      productList = [];
-      fetchProductList();
-      document.getElementById("btnClose").click();
-      document.getElementById("btnReset").click();
+  if (isValid) {
+    const newProduct = new Product(
+      id,
+      name,
+      image,
+      description,
+      price,
+      inventory,
+      rating,
+      type
+    );
+
+    axios({
+      url: linkAPI,
+      method: "POST",
+      data: newProduct,
     })
-    .catch((err) => {
-      console.log(err);
-    });
+      .then((res) => {
+        productList = [];
+        fetchProductList();
+        document.getElementById("btnClose").click();
+        document.getElementById("btnReset").click();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+};
+
+// Clear Error Message
+clearErrorMessage = () => {
+  const spMessage = document.getElementsByClassName("sp-message");
+  for (const message of spMessage) {
+    message.innerHTML = "";
+  }
+  document.getElementById("idProduct").removeAttribute("disabled");
 };
 
 // Delete Product
@@ -222,10 +278,12 @@ deleteProduct = (id) => {
 };
 // Edit Product
 editProduct = (id) => {
+  clearErrorMessage();
   // Modal Handling
   document.getElementById("modalTitle").innerHTML = "Edit Product";
   document.getElementById("btnHandle").innerHTML = `
-      <button type="button" class="btn btn-success" onclick="updateProduct('${id}')">Save</button>
+      <button type="button" class="btn btn-success"
+      onclick="updateProduct('${id}')">Save Product</button>
       `;
 
   axios({
@@ -250,6 +308,7 @@ editProduct = (id) => {
     });
 };
 
+// Update Product
 updateProduct = (id) => {
   const idProduct = document.getElementById("idProduct").value;
   const name = document.getElementById("name").value;
@@ -260,35 +319,49 @@ updateProduct = (id) => {
   const rating = document.getElementById("rating").value;
   const type = document.getElementById("type").value;
 
-  const newProduct = new Product(
-    idProduct,
-    name,
-    image,
-    description,
-    price,
-    inventory,
-    rating,
-    type
-  );
+  // Validation Form
+  let isValid = true;
+  isValid &= checkRequired(id, "idError");
+  isValid &= checkRequired(name, "nameError");
+  isValid &= checkRequired(image, "imageError");
+  isValid &= checkRequired(description, "desError");
+  isValid &= checkRequired(price, "priceError");
+  isValid &= checkRequired(inventory, "invError");
+  isValid &=
+    checkRequired(rating, "ratingError") && checkRating(rating, "ratingError");
+  isValid &= checkRequired(type, "typeError");
+  if (isValid) {
+    const newProduct = new Product(
+      idProduct,
+      name,
+      image,
+      description,
+      price,
+      inventory,
+      rating,
+      type
+    );
 
-  axios({
-    url: linkAPI + `/${id}`,
-    method: "PUT",
-    data: newProduct,
-  })
-    .then((res) => {
-      productList = [];
-      fetchProductList();
-      document.getElementById("btnClose").click();
-      document.getElementById("btnReset").click();
+    axios({
+      url: linkAPI + `/${id}`,
+      method: "PUT",
+      data: newProduct,
     })
-    .catch((err) => {
-      console.log(err);
-    });
+      .then((res) => {
+        productList = [];
+        fetchProductList();
+        document.getElementById("btnClose").click();
+        document.getElementById("btnReset").click();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 };
 
 // Find product
 findProduct = () => {
+  currentPage = 1;
   let result = [];
   // Input: keyword
   let keyword = document.getElementById("txtSearch").value;
@@ -397,6 +470,7 @@ document.getElementById("sortPriceDown").addEventListener("click", () => {
   renderProductList(sortProductPrice(-1));
 });
 
+// Map Data
 mapData = (data) => {
   for (let product of data) {
     const newProduct = new Product(
@@ -414,6 +488,7 @@ mapData = (data) => {
   }
 };
 
+// Find Product By ID
 findById = (id) => {
   for (let product of productList) {
     if (product.id === id) {
@@ -422,6 +497,7 @@ findById = (id) => {
   }
 };
 
+// Find Position Of Product By ID
 findPosition = (id) => {
   for (let i in productList) {
     if (productList[i].id === id) {
@@ -448,3 +524,32 @@ nonAccentVietnamese = (str) => {
 };
 
 fetchProductList();
+
+// ------------VALIDATION------------
+checkRequired = (value, errorId) => {
+  if (value) {
+    document.getElementById(errorId).innerHTML = "";
+    return true;
+  }
+  document.getElementById(errorId).innerHTML = "*This field is required";
+  return false;
+};
+
+checkExistsId = (id) => {
+  const index = findPosition(id, productList);
+  if (index === -1) {
+    document.getElementById("idError").innerHTML = "";
+    return true;
+  }
+  document.getElementById("idError").innerHTML = "*ID already exists";
+  return false;
+};
+
+checkRating = (value, errorId) => {
+  if (+value <= 5.0 && +value >= 0.0) {
+    return true;
+  }
+  document.getElementById(errorId).innerHTML =
+    "*Invalid Rating! Please enter number in the range 0.0-5.0";
+  return false;
+};
