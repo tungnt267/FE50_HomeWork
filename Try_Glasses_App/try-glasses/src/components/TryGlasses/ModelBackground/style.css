@@ -1,0 +1,66 @@
+.model-bg {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+}
+.glass-detail {
+  background-color: rgba(252, 181, 110, 0.5);
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  z-index: 1;
+}
+.glass-detail h6 {
+  color: #b882f9;
+  margin: 0;
+}
+.glass-detail p {
+  margin: 0;
+}
+.model-glass {
+  position: absolute;
+  top: 100px;
+  left: 42%;
+  width: 150px;
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+}
+.model-glass img {
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.model-img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 400px) {
+  .model-bg {
+    width: 200px;
+    height: 290px;
+  }
+  .glass-detail {
+    padding: 10px 5px;
+    height: 35%;
+    z-index: 1;
+  }
+  .glass-detail h6 {
+    color: #b882f9;
+    font-size: 16px;
+  }
+  .glass-detail p {
+    font-size: 13px;
+  }
+  .model-glass {
+    top: 72px;
+    left: 50.5%;
+    width: 100px;
+  }
+}
