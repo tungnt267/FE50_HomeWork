@@ -1,0 +1,37 @@
+.img-betting {
+  width: 150px;
+}
+
+.sp-amount {
+  font-size: 18px;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+
+@media screen and (max-width: 767px) {
+  .sp-amount {
+    font-size: 15px;
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .img-betting {
+    width: 120px;
+  }
+  .sp-amount {
+    font-size: 15px;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  .btn-amount {
+    padding: 2px 5px !important;
+  }
+}
